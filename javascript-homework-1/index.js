@@ -27,12 +27,16 @@
 //
 var firstName = "Callum";
 var lastName = "O'Kane";
+var age = 30;
 var isLearning = true;
+
 //
 // 2
 //
-var age = 30;
-var height = 183;
+const num1 = 60;
+const num2 = 40;
+const answer = num1 + num2;
+console.log(answer);
 //
 // 3
 //
@@ -41,36 +45,50 @@ var fullName = firstName + " " + lastName;
 // 4
 //
 var userName = "Cal1234";
-if (userName == firstName) {
-  display = "User's username can not be first name";
+if (userName === firstName) {
+  console.log("User's username can not be first name");
 }
 //
 // 5
 //
-if (userName == firstName) {
-  display = "User's username can not be first name";
-} else if (userName == lastName) {
-  display = "User's username can not be last name";
+if (userName === firstName) {
+  console.log("User's username can not be first name");
+} else if (userName === lastName) {
+  console.log("User's username can not be last name");
 }
 //
 // 6
 //
 var usernameAvailable = true;
 var passwordGood = true;
-if (userName == firstName) {
-  display = "User's username can not be first name";
-} else if (userName == lastName) {
-  display = "User's username can not be last name";
-} else if (userName == fullName) {
-  display = "User's username can not be name";
-} else if (usernameAvailable + passwordGood == true) {
-  display = "Account created";
+if (userName === firstName) {
+  console.log("User's username can not be first name");
+} else if (userName === lastName) {
+  console.log("User's username can not be last name");
+} else if (userName === fullName) {
+  console.log("User's username can not be name");
+} else if (usernameAvailable === true && passwordGood === true) {
+  console.log("Account created");
 } else {
-  display = "We have a problem";
+  console.log("We have a problem");
 }
 //
-// 7 Not attempted. I know I've messed up Q4 - Q6 but can't figure out how...
-//
+// 7
+
+switch (userName) {
+  case firstName:
+    console.log("User's username can not be first name");
+    break;
+  case lastName:
+    console.log("User's username can not be last name");
+    break;
+}
+switch (usernameAvailable === true && passwordGood === true) {
+  default:
+    console.log("Account created");
+}
+// is it correct that above needs second switch because these
+// booleans can't be matched to the variable userName?
 
 //
 // 8
